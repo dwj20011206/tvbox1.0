@@ -1,91 +1,5 @@
 [
   {
-    "id": "999tv",
-    "name": "999tv",
-    "api": "https://999tv.app",
-    "type": 1,
-    "nsfw": false,
-    "extra": {
-      "js": {
-        "category": [
-          {
-            "text": "电影",
-            "id": "20"
-          },
-          {
-            "text": "连续剧",
-            "id": "21"
-          },
-          {
-            "text": "综艺片",
-            "id": "22"
-          },
-          {
-            "text": "伦理片",
-            "id": "23"
-          },
-          {
-            "text": "动漫片",
-            "id": "24"
-          },
-          {
-            "text": "短剧大片",
-            "id": "25"
-          },
-          {
-            "text": "体育赛事",
-            "id": "26"
-          }
-        ],
-        "home": "const cate=env.get(\"category\");const page=env.get(\"page\");const url=`${env.baseUrl}/index.php/vod/show/id/${cate}/page/${page}.html`;const html=await req(url);const $=kitty.load(html);return $(\".module a.module-poster-item.module-item\").toArray().map(item=>{const id=$(item).attr(\"href\")??\"\";const title=$(item).attr(\"title\")??\"\";const remark=$(item).find(\".module-item-note\").text()??\"\";const cover=$(item).find(\".lazy.lazyload\").attr(\"data-original\")??\"\";return{id,title,cover,remark,playlist:[]}})",
-        "detail": "const id=env.get(\"movieId\");const url=`${env.baseUrl}${id}`;const html=await req(url);const $=kitty.load(html);const desc=$(\".show-desc\").text();const title=$(\".module-info-heading h1\").text();const cover=$(\".ls-is-cached.lazy.lazyload\").attr(\"data-original\")??\"\";const player=$(\".module-play-list-link\").toArray().map(item=>{const text=$(item).text();const id=$(item).attr(\"href\")??\"\";return{text,id}});return{id,title,cover,desc,remark:\"\",playlist:[{title:\"999TV\",videos:player}]}",
-        "search": "const wd=env.get(\"keyword\");const page=env.get(\"page\");const url=`${env.baseUrl}/index.php/vod/search/page/${page}/wd/${wd}.html`;const html=await req(url);const $=kitty.load(html);return $(\".module-items.module-card-items .module-card-item\").toArray().map(item=>{const a=$(item).find(\"a.module-card-item-poster\");const img=$(item).find(\"img\");const id=a.attr(\"href\")??\"\";const title=img.attr(\"alt\")??\"\";const cover=img.attr(\"data-original\")??\"\";const remark=$(item).find(\".module-card-item-class\").text();return{id,title,cover,remark,playlist:[]}})",
-        "parseIframe": "return kitty.utils.getM3u8WithIframe(env)"
-      }
-    }
-  },
-  {
-    "id": "cnotv",
-    "name": "明月影视",
-    "api": "https://cnotv.com",
-    "nsfw": false,
-    "type": 1,
-    "extra": {
-      "js": {
-        "category": [
-          {
-            "text": "电影",
-            "id": "1"
-          },
-          {
-            "text": "电视剧",
-            "id": "2"
-          },
-          {
-            "text": "综艺",
-            "id": "3"
-          },
-          {
-            "text": "动漫",
-            "id": "4"
-          },
-          {
-            "text": "体育记录",
-            "id": "5"
-          },
-          {
-            "text": "短剧",
-            "id": "51"
-          }
-        ],
-        "home": "const cate=env.get(\"category\");const page=env.get(\"page\");const url=`${env.baseUrl}/vodshow/${cate}--------${page}---.html`;const html=await req(url);const $=kitty.load(html);return $($(\".module .module-list\").toArray()[0]).find(\".module-items .module-item\").toArray().map(item=>{const a=$(item).find(\"a\");const img=$(item).find(\"img\");const id=a.attr(\"href\")??\"\";const cover=img.attr(\"data-src\")??\"\";const title=img.attr(\"alt\")??\"\";const remark=$(item).find(\".module-item-text\").text()??\"\";return{id,title,cover,remark,playlist:[]}})",
-        "detail": "const id=env.get(\"movieId\");const url=`${env.baseUrl}${id}`;const html=await req(url);const $=kitty.load(html);const title=$(\".page-title\").text()??\"\";const cover=$(\".video-cover img\").attr(\"data-src\")??\"\";const desc=$(\".video-info-item.video-info-content.vod_content span\").text()??\"\";const tabs=$(\".play-source-tab a, .module-tab-item\").toArray().map(item=>{const name=$(item).attr(\"data-dropdown-value\")??\"\\u9ED8\\u8BA4\";return name});const playlistTable=$(\".module-player-list\").toArray().map(item=>{let id=$(item).attr(\"id\")??\"\";id=id.replace(\"glist-\",\"\");const list=$(item).find(\".sort-item a\").toArray().map(item=>{const text=($(item).text()??\"\").trim();const id=$(item).attr(\"href\")??\"\";return{text,id}});return{id:+id,list}});const playlist=tabs.map((item,index)=>{return{title:item,videos:playlistTable[index].list}});return{id,cover,title,remark:\"\",desc,playlist}",
-        "search": "const wd=env.get(\"keyword\");const page=env.get(\"page\");const url=`${env.baseUrl}/vodsearch/${wd}----------${page}---.html`;const html=await req(url);const $=kitty.load(html);return $(\".module-search-item\").toArray().map(item=>{const a=$(item).find(\"a\");const img=$(item).find(\"img\");const id=a.attr(\"href\")??\"\";const title=a.attr(\"title\")??\"\";const cover=img.attr(\"data-src\")??\"\";return{id,title,cover,remark:\"\",desc:\"\",playlist:[]}})",
-        "parseIframe": "return kitty.utils.getM3u8WithIframe(env)"
-      }
-    }
-  },
-  {
     "id": "duonaovod",
     "name": "多瑙影院",
     "api": "https://www.duonaovod.com",
@@ -175,43 +89,6 @@
         "detail": "const id=env.get(\"movieId\");const url=`${env.baseUrl}${id}`;const html=await req(url);const $=kitty.load(html);const box=$(\".conch-ctwrap-auto .container .hl-row-box\");const div=box.find(\".hl-item-thumb.hl-lazy\");const title=div.attr(\"title\")??\"\";const cover=div.attr(\"data-original\")??\"\";const tabs=$(\".hl-plays-from a\").toArray().map(item=>{return $(item).text().trim()});const _videos=$(\".hl-tabs-box\").toArray().map(item=>{return $(item).find(\"li a\").toArray().map(item=>{const id=$(item).attr(\"href\")??\"\";const text=$(item).text()??\"\";return{id,text}})});const playlist=tabs.map((title,index)=>{const videos=_videos[index];return{title,videos}});return{id,title,cover,playlist}",
         "search": "const wd=env.get(\"keyword\");const page=env.get(\"page\");const url=`${env.baseUrl}/index.php/vod/search/page/${page}/wd/${wd}.html`;const html=await req(url);const $=kitty.load(html);return $(\".hl-one-list li\").toArray().map(item=>{const a=$(item).find(\"a\");const id=a.attr(\"href\")??\"\";const cover=a.attr(\"data-original\")??\"\";const title=a.attr(\"title\")??\"\";return{id,cover,title,remark:\"\"}})",
         "parseIframe": "const iframe=env.get(\"iframe\");const html=await req(`${env.baseUrl}${iframe}`);const $=kitty.load(html);const script=$(\"script\").toArray().filter(item=>{const text=$(item).text().trim();if(text.startsWith(\"var player_aaaa\"))return true})[0];let code=$(script).text().trim().replace(\"var player_aaaa=\",\"\");code=`(${code})`;const unsafeObj=eval(code);function customUnescape(str){return str.replace(/%u([0-9A-Fa-f]{4})|%([0-9A-Fa-f]{2})/g,function(match,unicodeHex,hex){if(unicodeHex){return String.fromCharCode(parseInt(unicodeHex,16))}else{return String.fromCharCode(parseInt(hex,16))}})}function base64Decode(input){const chars=\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=\";let i=input.length;for(;i>0&&input[i]!==\"=\";i--){}const str=input.substr(0,i-1);let output=\"\";if(str.length%4===1){return output}let bs=0;for(let bc=0,buffer,idx=0;buffer=str.charAt(idx);~buffer&&(bs=bc%4!==0?bs*64+buffer:buffer,bc++%4)!==0?output+=String.fromCharCode(255&bs>>>(-2*bc&6)):0){if(`${buffer}`.length===0){break}buffer=chars.indexOf(buffer);idx++}return output}if(unsafeObj.encrypt==\"1\"){unsafeObj.url=customUnescape(unsafeObj.url)}else if(unsafeObj.encrypt==\"2\"){unsafeObj.url=customUnescape(base64Decode(unsafeObj.url))}return unsafeObj.url"
-      }
-    }
-  },
-  {
-    "id": "feituys",
-    "name": "飞天影视",
-    "api": "https://www.feitu.tv",
-    "nsfw": false,
-    "type": 1,
-    "extra": {
-      "js": {
-        "category": [
-          {
-            "text": "电影",
-            "id": "1"
-          },
-          {
-            "text": "连续剧",
-            "id": "2"
-          },
-          {
-            "text": "综艺",
-            "id": "3"
-          },
-          {
-            "text": "动漫",
-            "id": "4"
-          },
-          {
-            "text": "超爽短剧",
-            "id": "110"
-          }
-        ],
-        "home": "const cate=env.get(\"category\");const page=env.get(\"page\");const url=`${env.baseUrl}/filter/${cate}/page/${page}`;const html=await req(url);const $=kitty.load(html);return $(\".hl-vod-list li\").toArray().map(item=>{const a=$(item).find(\"a\");const title=a.attr(\"title\")??\"\";const id=a.attr(\"href\")??\"\";const cover=a.attr(\"data-original\")??\"\";const remark=a.find(\".hl-lc-1.remarks\").text()??\"\";return{id,title,cover,remark}})",
-        "detail": "const id=env.get(\"movieId\");const url=`${env.baseUrl}${id}`;const html=await req(url);const $=kitty.load(html);const span=$(\".hl-dc-pic .hl-item-thumb.hl-lazy\");const cover=span.attr(\"data-original\")??\"\";const title=span.attr(\"title\")??\"\";const tabs=$(\".hl-plays-from a\").toArray().map(item=>{return $(item).text().trim()});const map=$(\".hl-tabs-box\").toArray().map(item=>{return $(item).find(\"a\").toArray().map(item=>{const text=$(item).text()??\"\";const id=$(item).attr(\"href\")??\"\";return{id,text}})});const playlist=tabs.map((title,index)=>{const videos=map[index];return{title,videos}});let desc=\"\";{const _=$(\".hl-full-box li\").toArray().at(-1);let text=$(_).text()??\"\";if(text.startsWith(\"\\u7B80\\u4ECB\")){text=text.replace(\"\\u7B80\\u4ECB\\uFF1A\",\"\");if(text!=\"\\u6682\\u65E0\\u7B80\\u4ECB\"){desc=text}}}return{id,cover,title,desc,playlist}",
-        "search": "const page=env.get(\"page\");const wd=env.get(\"keyword\");const url=`${env.baseUrl}/search/${wd}-${page}/`;const html=await req(url);const $=kitty.load(html);return $(\".hl-one-list li\").toArray().map(item=>{const a=$(item).find(\"a\");const id=a.attr(\"href\")??\"\";const title=a.attr(\"title\")??\"\";const cover=a.attr(\"data-original\")??\"\";const remark=$(item).find(\".hl-text-conch.score\").text()??\"\";return{id,title,cover,remark}})",
-        "parseIframe": "return kitty.utils.getM3u8WithIframe(env)"
       }
     }
   },
@@ -1421,4 +1298,5 @@
       }
     }
   }
+
 ]
