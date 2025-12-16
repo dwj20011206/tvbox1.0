@@ -94,28 +94,6 @@
     }
   },
   {
-    "id": "360ziyuan",
-    "name": "360资源",
-    "api": "https://360zy.com/api.php/provide/vod",
-    "logo": "https://360zy.com/logo.png",
-    "nsfw": false,
-    "type": 0,
-    "extra": {
-      "gfw": true
-    }
-  },
-  {
-    "id": "tianyiziyuan",
-    "name": "天翼资源",
-    "api": "https://www.911ysw.top/tianyi.php/provide/vod",
-    "logo": "https://www.911ysw.top/static/jsui/img/logo_max_f.png",
-    "nsfw": false,
-    "type": 0,
-    "extra": {
-      "gfw": false
-    }
-  },
-  {
     "id": "feifanziyuan",
     "name": "非凡资源",
     "api": "http://cj.ffzyapi.com/api.php/provide/vod/at/xml",
@@ -155,16 +133,6 @@
     "type": 0,
     "extra": {
       "gfw": false
-    }
-  },
-  {
-    "id": "1080zyku",
-    "name": "1080资源",
-    "api": "http://api.1080zyku.com/inc/api.php/provide/vod",
-    "nsfw": false,
-    "type": 0,
-    "extra": {
-      "gfw": true
     }
   },
   {
@@ -231,17 +199,6 @@
     }
   },
   {
-    "id": "doubanziyuan",
-    "name": "豆瓣资源",
-    "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/josn",
-    "logo": "https://caiji.dbzy5.com/template/vipzy/images/logo.png",
-    "nsfw": false,
-    "type": 0,
-    "extra": {
-      "gfw": false
-    }
-  },
-  {
     "id": "maoyanziyuan",
     "name": "猫眼资源",
     "api": "https://api.maoyanapi.top/api.php/provide/vod",
@@ -292,4 +249,5 @@
       "gfw": false
     }
   }
+
 ]
