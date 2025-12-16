@@ -1,7 +1,7 @@
 [
   {
     "id": "py_DianYingTanTang",
-    "name": "电影天堂(T4)",
+    "name": "🫐电影天堂(T4)",
     "api": "https://py.doube.eu.org/spider?site=DianYingTanTang",
     "nsfw": false,
     "type": 1,
@@ -69,6 +69,7 @@
       "template": "t4"
     }
   },
+
   {
     "id": "t4-madou",
     "name": "MaDou(T4)",
@@ -98,5 +99,125 @@
     "extra": {
       "template": "t4"
     }
-  }
+  },
+  {
+    "id": "番号资源",
+    "name": "番号资源",
+    "api": "http://fhapi9.com/api.php/provide/vod/at/xml",
+    "nsfw": false,
+    "type": 1,
+    "extra": {
+      "template": "t4"
+    }
+  },
+  {
+    "id": "4eef8bc4-71f8-54fa-bffd-d1d3d9e77dce",
+    "name": "白嫖",
+    "api": "https://www.kxgav.com/api/xml.php",
+    "nsfw": false,
+    "type": 1,
+    "extra": {
+      "template": "t4"
+    }
+  },
+  {
+    "id": "美少女资源站",
+    "name": "美少女资源站",
+    "api": "https://www.msnii.com/api/xml.php",
+    "nsfw": false,
+    "type": 1,
+    "extra": {
+      "template": "t4"
+    }
+  },
+  {
+    "id": "淫水机资源站",
+    "name": "淫水机资源站",
+    "api": "https://www.xrbsp.com/api/xml.php",
+    "nsfw": false,
+    "type": 1,
+    "extra": {
+      "template": "t4"
+    }
+  },
+  {
+      "id": "香奶儿资源站",
+      "name": "香奶儿资源站",
+      "api": "https://www.gdlsp.com/api/xml.php",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+    },
+    {
+      "id": "香奶儿资源站",
+      "name": "香奶儿资源站",
+      "api": "https://www.gdlsp.com/api/xml.php",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+    },
+    {
+      "id": "白嫖资源站",
+      "name": "白嫖资源站",
+      "api": "https://www.kxgav.com/api/xml.php",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+    },
+    {
+      "id": "黄AV资源站",
+      "name": "黄AV资源站",
+      "api": "https://www.pgxdy.com/api/xml.php",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+  },
+    {
+      "id": "老色逼资源站",
+      "name": "老色逼资源站",
+      "api": "https://apilsbzy1.com/api.php/provide/vod/?ac=list",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+  },
+  {
+      "id": "155资源",
+      "name": "155资源",
+      "api": "https://155api.com/api.php/provide/vod/",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+    },
+    {
+      "id": "滴滴资源",
+      "name": "滴滴资源",
+      "api": "https://api.ddapi.cc/api.php/provide/vod/?ac=list",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+    },
+    {
+      "id": "鸡坤资源",
+      "name": "鸡坤资源",
+      "api": "https://jkunzyapi.com/api.php/provide/vod/",
+      "nsfw": false,
+      "type": 1,
+      "extra": {
+      "template": "t4"
+    }
+    }
 ]
